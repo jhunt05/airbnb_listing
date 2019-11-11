@@ -7,15 +7,24 @@
   src: url("fonts/Avenir-Heavy.ttf");
   font-weight: bold;
 }
+* {
+  outline: none;
+}
+
 body {
   margin: 0;
   font-family: Avenir, "Avenir-Heavy";
+}
+
+.container {
+  overflow: hidden;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
+  position: relative;
 }
 .header__logo-link {
   height: 30px;
@@ -51,8 +60,42 @@ body {
   height: 30px;
   border-radius: 50%;
 }
+.menu__user-block {
+  display: none;
+  background-color: #fff;
+  width: 150px;
+  height: 70px;
+  position: absolute;
+  right: 5px;
+  top: 50px;
+  border-radius: 10px;
+  border: 1px solid silver;
+}
+.menu__user-block_btn {
+  display: block;
+  margin: 17px auto;
+  width: 50%;
+  height: 35px;
+  outline: 0;
+  border: 1px solid silver;
+  background: #e0e1e2 none;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 0.78571429em 1.5em 0.78571429em;
+  font-weight: 700;
+  line-height: 1em;
+  text-align: center;
+  cursor: pointer;
+}
+.menu__user-block_btn:hover {
+  opacity: 0.8;
+}
 
-.slider__image {
+.ui.icon.button {
+  margin: 15px auto;
+  display: block;
+}
+
+.product__image {
   width: 100%;
   height: 70vh;
   background: url(../images/main-photo.jpeg) no-repeat;
@@ -166,6 +209,7 @@ body {
   height: 50px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 1s, color 1s;
 }
 .main__btn:hover {
   background-color: #118488;
@@ -207,6 +251,9 @@ body {
   font-size: 13px;
   outline: none;
 }
+.main__input:focus {
+  border-bottom-color: #FD5C63;
+}
 .main__submit {
   margin-top: 20px;
   color: #fff;
@@ -217,6 +264,7 @@ body {
   height: 50px;
   cursor: pointer;
   font-size: 16px;
+  transition: background-color 1s, color 1s;
 }
 .main__submit:hover {
   background-color: #fff;
@@ -288,6 +336,10 @@ body {
   }
   .menu__link:first-child, .menu__link:last-child {
     margin-right: 0;
+  }
+  .menu__user-block {
+    top: 180px;
+    right: 35%;
   }
 
   .main__info-container {

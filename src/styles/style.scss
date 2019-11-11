@@ -11,15 +11,24 @@
 
 $main-color: #3D4E61;
 
+* {
+  outline: none;
+}
+
 body {
   margin: 0;
   font-family: Avenir, "Avenir-Heavy";
+}
+
+.container {
+  overflow: hidden;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
+  position: relative;
 
   &__logo-link {
     height: 30px;
@@ -61,10 +70,46 @@ body {
     height: 30px;
     border-radius: 50%;
   }
+
+  &__user-block {
+    display: none;
+    background-color: #fff;
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    right: 5px;
+    top: 50px;
+    border-radius: 10px;
+    border: 1px solid silver;
+
+    &_btn {
+      display: block;
+      margin: 17px auto;
+      width: 50%;
+      height: 35px;
+      outline: 0;
+      border: 1px solid silver;
+      background: #e0e1e2 none;
+      color: rgba(0,0,0,.6);
+      padding: .78571429em 1.5em .78571429em;
+      font-weight: 700;
+      line-height: 1em;
+      text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  } 
 }
 
-.slider {
+.ui.icon.button {
+  margin: 15px auto;
+  display: block;
+}
 
+.product {
   &__image {
     width: 100%;
     height: 70vh;
@@ -199,6 +244,7 @@ body {
     height: 50px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 1s, color 1s;
 
     &:hover {
       background-color: #118488;
@@ -244,6 +290,10 @@ body {
     box-sizing: border-box;
     font-size: 13px;
     outline: none;
+
+    &:focus {
+      border-bottom-color: #FD5C63;
+    }
   }
 
   &__submit {
@@ -256,6 +306,7 @@ body {
     height: 50px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 1s, color 1s;
 
     &:hover {
       background-color: #fff;
