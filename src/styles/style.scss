@@ -69,38 +69,6 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-  }
-
-  &__user-block {
-    display: none;
-    background-color: #fff;
-    width: 150px;
-    height: 70px;
-    position: absolute;
-    right: 5px;
-    top: 50px;
-    border-radius: 10px;
-    border: 1px solid silver;
-
-    &_btn {
-      display: block;
-      margin: 17px auto;
-      width: 50%;
-      height: 35px;
-      outline: 0;
-      border: 1px solid silver;
-      background: #e0e1e2 none;
-      color: rgba(0,0,0,.6);
-      padding: .78571429em 1.5em .78571429em;
-      font-weight: 700;
-      line-height: 1em;
-      text-align: center;
-      cursor: pointer;
-
-      &:hover {
-        opacity: 0.8;
-      }
-    }
   } 
 }
 

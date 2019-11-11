@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Listing</title>
   <link rel="stylesheet" href="./styles/style.css">
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -18,11 +17,6 @@
         <a class="menu__link" href="#">Messages</a>
         <a class="menu__link" href="#"><img class="menu__user-photo" src="./images/userphoto.jpeg"></a>
       </nav>
-      <div class="menu__user-block">
-        <button class="menu__user-block_btn">
-          Exit
-        </button>
-      </div>
     </header>
 
     <section class="product">
@@ -126,13 +120,5 @@
       </div>
     </footer>
   </div>
-
-  <script>
-    $(document).ready(function() {
-      $(".menu__user-photo").click(function() {
-        $(".menu__user-block").toggle({"display":"flex", "flex-direction": "column"});
-      })
-    })
-  </script>
 </body>
 </html>
