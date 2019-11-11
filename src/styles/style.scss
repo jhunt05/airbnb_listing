@@ -163,6 +163,11 @@ body {
       height: 50px;
       border-radius: 50%;
       margin-right: 21px;
+
+      & img {
+        width: inherit;
+        height: inherit;
+      }
     }
 
     &-info {

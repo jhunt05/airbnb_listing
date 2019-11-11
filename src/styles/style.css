@@ -137,6 +137,10 @@ body {
   border-radius: 50%;
   margin-right: 21px;
 }
+.main__review-photo img {
+  width: inherit;
+  height: inherit;
+}
 .main__review-info {
   display: flex;
   flex-direction: column;
