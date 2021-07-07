@@ -1,0 +1,325 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("fonts/Avenir-Book.ttf");
+}
+
+@font-face {
+  font-family: "Avenir-Heavy";
+  src: url("fonts/Avenir-Heavy.ttf");
+  font-weight: bold;
+}
+
+$main-color: #3D4E61;
+
+* {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  font-family: Avenir, "Avenir-Heavy";
+}
+
+.container {
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  position: relative;
+
+  &__logo-link {
+    height: 30px;
+    margin-left: 26px;
+  }
+
+  &__logo {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.menu {
+  display: flex;
+
+  &__link {
+    color: $main-color;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 32px;
+    text-decoration: none;
+    margin-right: 40px;
+
+    &:hover {
+      color: #f3cd7c;
+    }
+
+    &:first-child {
+      margin-right: 50px;
+    }
+
+    &:last-child {
+      margin-right: 19px;
+    }
+  }
+
+  &__user-photo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  } 
+}
+
+.ui.icon.button {
+  margin: 15px auto;
+  display: block;
+}
+
+.product {
+  &__image {
+    width: 100%;
+    height: 70vh;
+    background: url(../images/main-photo.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.main {
+  position: relative;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__info-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__heading {
+    color: $main-color;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  &__description {
+    color: #687C94;
+    margin-top: 15px;
+  }
+
+  &__conditions-item {
+    margin-right: 40px;
+    color: $main-color;
+  }
+
+  &__text {
+    width: 490px;
+    margin: 30px 0;
+    font-size: 16px;
+    color: $main-color;
+  }
+
+  &__link {
+    color: $main-color;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+
+    &:hover {
+      color: #ff6348;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 40px;
+    font-size: 20px;
+    color: $main-color;
+    font-weight: bold;
+  }
+
+  &__amenities {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: $main-color;
+
+    &-small {
+      width: 70px;
+    }
+  }
+
+  &__small-heading {
+    font-size: 28px;
+    color: $main-color;
+    margin-top: 66px;
+    margin-bottom: 0;
+  }
+
+  &__review {
+    margin-top: 34px;
+
+    &-person {
+      display: flex;
+    }
+
+    &-photo {
+      background: #C4C4C4;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 21px;
+
+      & img {
+        width: inherit;
+        height: inherit;
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      color: $main-color;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    &-date {
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
+
+  &__location {
+    font-size: 11px;
+    color: $main-color;
+    margin-top: 5px;
+  }
+
+  &__btn {
+    color: #118488;
+    font-size: 16px;
+    border: 1px solid #118488;
+    background-color: #fff;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 1s, color 1s;
+
+    &:hover {
+      background-color: #118488;
+      color: #fff;
+      border: 1px solid #118488;
+    }
+  }
+
+  &__book {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E1E7ED;
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 330px;
+    height: 319px;
+    padding: 30px;
+    z-index: 1;
+    position: sticky;
+    top: 40px;
+    margin: 30px 0 0 70px;
+    order: 2;
+  }
+
+  &__price {
+    color: $main-color;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    border: 1px solid #E1E7ED;
+    border-radius: 3px;
+    width: 270px;
+    height: 50px;
+    margin-bottom: 16px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-size: 13px;
+    outline: none;
+
+    &:focus {
+      border-bottom-color: #FD5C63;
+    }
+  }
+
+  &__submit {
+    margin-top: 20px;
+    color: #fff;
+    background: #FD5C63;
+    border: 1px solid #FD5C63;
+    border-radius: 4px;
+    width: 270px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 1s, color 1s;
+
+    &:hover {
+      background-color: #fff;
+      color: #FD5C63;
+      border: 1px solid #FD5C63;
+    }
+  }
+}
+
+
+.footer {
+  margin: 75px 0 40px;
+
+  &__line {
+    color: silver;
+    opacity: 0.3;
+  }
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 44px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $main-color;
+    font-size: 16px;
+    margin-bottom: 9px;
+    
+    &:hover {
+      color: #ff6348;
+    }
+
+    &:first-child {
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+  }
+}
+
+@import 'media';
